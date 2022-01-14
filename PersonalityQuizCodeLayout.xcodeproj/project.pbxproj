@@ -35,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7846E6BB2790D1C50035EEE3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				789F1FE22790CA220059CE18 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		789F1FD22790CA220059CE18 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +62,9 @@
 		789F1FDD2790CA220059CE18 /* PersonalityQuizCodeLayout */ = {
 			isa = PBXGroup;
 			children = (
+				7846E6BB2790D1C50035EEE3 /* ViewControllers */,
 				789F1FDE2790CA220059CE18 /* AppDelegate.swift */,
 				789F1FE02790CA220059CE18 /* SceneDelegate.swift */,
-				789F1FE22790CA220059CE18 /* MainViewController.swift */,
 				789F1FE72790CA240059CE18 /* Assets.xcassets */,
 				789F1FE92790CA240059CE18 /* LaunchScreen.storyboard */,
 				789F1FEC2790CA240059CE18 /* Info.plist */,
