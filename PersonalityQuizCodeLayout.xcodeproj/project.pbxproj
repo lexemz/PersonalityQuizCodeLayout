@@ -63,13 +63,37 @@
 			isa = PBXGroup;
 			children = (
 				7846E6BB2790D1C50035EEE3 /* ViewControllers */,
-				789F1FDE2790CA220059CE18 /* AppDelegate.swift */,
-				789F1FE02790CA220059CE18 /* SceneDelegate.swift */,
-				789F1FE72790CA240059CE18 /* Assets.xcassets */,
-				789F1FE92790CA240059CE18 /* LaunchScreen.storyboard */,
-				789F1FEC2790CA240059CE18 /* Info.plist */,
+				78C793B2279228B8000AD83B /* App */,
+				78C793B1279228B2000AD83B /* Media */,
+				78C793B0279228A9000AD83B /* Storyboards */,
 			);
 			path = PersonalityQuizCodeLayout;
+			sourceTree = "<group>";
+		};
+		78C793B0279228A9000AD83B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				789F1FE92790CA240059CE18 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		78C793B1279228B2000AD83B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				789F1FE72790CA240059CE18 /* Assets.xcassets */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		78C793B2279228B8000AD83B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				789F1FDE2790CA220059CE18 /* AppDelegate.swift */,
+				789F1FE02790CA220059CE18 /* SceneDelegate.swift */,
+				789F1FEC2790CA240059CE18 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +311,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K5L7239SK4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalityQuizCodeLayout/Info.plist;
+				INFOPLIST_FILE = PersonalityQuizCodeLayout/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -314,7 +338,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K5L7239SK4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalityQuizCodeLayout/Info.plist;
+				INFOPLIST_FILE = PersonalityQuizCodeLayout/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
