@@ -14,6 +14,7 @@
 		789F1FEB2790CA240059CE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789F1FE92790CA240059CE18 /* LaunchScreen.storyboard */; };
 		78C793B42792BB30000AD83B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C793B32792BB2F000AD83B /* QuizViewController.swift */; };
 		78C793B62792FF83000AD83B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C793B52792FF83000AD83B /* ResultViewController.swift */; };
+		78C793B927936DFC000AD83B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C793B827936DFC000AD83B /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		789F1FEC2790CA240059CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78C793B32792BB2F000AD83B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		78C793B52792FF83000AD83B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		78C793B827936DFC000AD83B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				7846E6BB2790D1C50035EEE3 /* ViewControllers */,
+				78C793B727936DBB000AD83B /* Models */,
 				78C793B2279228B8000AD83B /* App */,
 				78C793B1279228B2000AD83B /* Media */,
 				78C793B0279228A9000AD83B /* Storyboards */,
@@ -100,6 +103,14 @@
 				789F1FEC2790CA240059CE18 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		78C793B727936DBB000AD83B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78C793B827936DFC000AD83B /* Question.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				78C793B62792FF83000AD83B /* ResultViewController.swift in Sources */,
 				789F1FE32790CA220059CE18 /* WeclomeViewController.swift in Sources */,
 				789F1FDF2790CA220059CE18 /* AppDelegate.swift in Sources */,
+				78C793B927936DFC000AD83B /* Question.swift in Sources */,
 				78C793B42792BB30000AD83B /* QuizViewController.swift in Sources */,
 				789F1FE12790CA220059CE18 /* SceneDelegate.swift in Sources */,
 			);
