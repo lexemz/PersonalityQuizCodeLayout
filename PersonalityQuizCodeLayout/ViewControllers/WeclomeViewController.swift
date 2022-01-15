@@ -9,10 +9,12 @@ import UIKit
 
 class WeclomeViewController: UIViewController {
     
-    private var startButton = UIButton()
-    private var welcomeLabel = UILabel()
-    private var stackView = UIStackView()
+    // MARK: - Private properties
+    private let startButton = UIButton()
+    private let welcomeLabel = UILabel()
+    private let stackView = UIStackView()
     
+    // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,7 @@ class WeclomeViewController: UIViewController {
         configureAndSetConstraintsForDecorativeEmoji()
     }
     
+    // MARK: - Private methods
     private func configureButton() {
         startButton.setTitle("Начать опрос", for: .normal)
         startButton.titleLabel?.font = .systemFont(ofSize: 20)
@@ -52,6 +55,7 @@ class WeclomeViewController: UIViewController {
         setStackViewConstraints()
     }
     
+    // MARK: - Layout methods
     private func setStackViewConstraints() {
         let safeArea = view.safeAreaLayoutGuide
         
@@ -71,44 +75,32 @@ class WeclomeViewController: UIViewController {
     }
     
     private func configureAndSetConstraintsForDecorativeEmoji() {
-        let fontSize = UIFont.systemFont(ofSize: 30)
         
-        let leftUpperSmile = UILabel()
-        leftUpperSmile.text = "🐶"
-        leftUpperSmile.font = fontSize
-        
-        let rightUpperSmile = UILabel()
-        rightUpperSmile.text = "🐱"
-        rightUpperSmile.font = fontSize
-        
-        let leftLowerSmile = UILabel()
-        leftLowerSmile.text = "🐢"
-        leftLowerSmile.font = fontSize
-        
-        let rightLowerSmile = UILabel()
-        rightLowerSmile.text = "🐰"
-        rightLowerSmile.font = fontSize
+        let leftUpperSmile = createLabelForEmoji("🐶")
+        let rightUpperSmile = createLabelForEmoji("🐱")
+        let leftLowerSmile = createLabelForEmoji("🐢")
+        let rightLowerSmile = createLabelForEmoji("🐰")
 
         [leftUpperSmile, rightUpperSmile, leftLowerSmile, rightLowerSmile].forEach {
             view.addSubview($0)
         }
         
-        let margins = view.layoutMarginsGuide
+        let safeArea = view.layoutMarginsGuide
         
         // leftUpperSmile
         leftUpperSmile.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            leftUpperSmile.topAnchor.constraint(equalTo: margins.topAnchor, constant: 20),
-            leftUpperSmile.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20)
+            leftUpperSmile.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
+            leftUpperSmile.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
         ])
 
         // rightUpperSmile
         rightUpperSmile.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            rightUpperSmile.topAnchor.constraint(equalTo: margins.topAnchor, constant: 20),
-            rightUpperSmile.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+            rightUpperSmile.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
+            rightUpperSmile.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -20),
             rightUpperSmile.leadingAnchor.constraint(greaterThanOrEqualTo: leftUpperSmile.trailingAnchor)
         ])
         
@@ -116,17 +108,24 @@ class WeclomeViewController: UIViewController {
         leftLowerSmile.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            leftLowerSmile.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20),
-            leftLowerSmile.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20)
+            leftLowerSmile.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20),
+            leftLowerSmile.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20)
         ])
         
         // rightLowerSmile
         rightLowerSmile.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            rightLowerSmile.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -20),
-            rightLowerSmile.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+            rightLowerSmile.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20),
+            rightLowerSmile.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -20),
             rightLowerSmile.leadingAnchor.constraint(greaterThanOrEqualTo: leftLowerSmile.trailingAnchor)
         ])
+    }
+    
+    private func createLabelForEmoji(_ emoji: String) -> UILabel {
+        let emojiLabel = UILabel()
+        emojiLabel.text = emoji
+        emojiLabel.font = .systemFont(ofSize: 30)
+        return emojiLabel
     }
 }

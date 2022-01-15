@@ -18,7 +18,7 @@ class QuizViewController: UIViewController {
     }
     
         private func setupNavigationBar() {
-            title = "Question"
+            title = "Вопрос "
             navigationController?.navigationBar.prefersLargeTitles = true
     
             let barAppearance = UINavigationBarAppearance()
