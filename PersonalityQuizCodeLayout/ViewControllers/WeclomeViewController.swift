@@ -18,7 +18,6 @@ class WeclomeViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
 
-        
         configureButton()
         configureWelcomeLabel()
         configureStackView()
@@ -65,7 +64,10 @@ class WeclomeViewController: UIViewController {
     }
     
     @objc private func startButtonPressed() {
-        print(1)
+        let quizVC = QuizViewController()
+        let quizVCWithNavigationController = UINavigationController(rootViewController: quizVC)
+        quizVCWithNavigationController.modalPresentationStyle = .fullScreen
+        present(quizVCWithNavigationController, animated: true)
     }
     
     private func configureAndSetConstraintsForDecorativeEmoji() {
@@ -128,17 +130,3 @@ class WeclomeViewController: UIViewController {
         ])
     }
 }
-
-//    private func setupNavigationBar() {
-//        title = "Question"
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//
-//        let barAppearance = UINavigationBarAppearance()
-//        barAppearance.backgroundColor = UIColor.systemBackground
-//
-//        barAppearance.titleTextAttributes = [.foregroundColor: UIColor.label]
-//        barAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
-//
-//        navigationController?.navigationBar.standardAppearance = barAppearance
-//        navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
-//    }
