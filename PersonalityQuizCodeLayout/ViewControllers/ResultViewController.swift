@@ -9,47 +9,60 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    private let resultLabel = UILabel()
-    private let descriptionLabel = UILabel()
-    
-    private let stackView = UIStackView()
-    
-//    var result: 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Результат"
+    // MARK: - UI properties
+    private lazy var resultLabel: UILabel = {
+        let label = UILabel()
         
-        view.backgroundColor = .systemBackground
-
-        configureLables()
-        configureStackView()
-    }
-    
-    private func configureLables() {
-        resultLabel.text = "Вы - 🐶"
-        resultLabel.font = .systemFont(ofSize: 30)
-        resultLabel.textColor = .label
+        label.text = "Вы - 🐶"
+        label.font = .systemFont(ofSize: 30)
+        label.textColor = .label
         
-        descriptionLabel.text = "Подробное описание"
-        descriptionLabel.font = .systemFont(ofSize: 16)
-        descriptionLabel.textColor = .label
-    }
+        return label
+    }()
     
-    private func configureStackView() {
-        view.addSubview(stackView)
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Подробное описание"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .label
+        
+        return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
         
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fill
         stackView.spacing = 10
         
-        stackView.addArrangedSubview(resultLabel)
-        stackView.addArrangedSubview(descriptionLabel)
+        return stackView
+    }()
+    
+    
+    // MARK: - Life cycle methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         
-        setStackViewConstraitns()
+        title = "Результат"
+        
+        configureStackView()
     }
     
+    // MARK: - Private methods
+    private func configureStackView() {
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(resultLabel)
+        stackView.addArrangedSubview(descriptionLabel)
+        setStackViewConstraitns()
+    }
+}
+
+// MARK: - Layout methods
+extension ResultViewController {
     private func setStackViewConstraitns() {
         let safeArea = view.safeAreaLayoutGuide
         
