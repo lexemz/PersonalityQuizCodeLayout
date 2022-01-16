@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7836DBE52794D71F00553EA7 /* Extension + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836DBE42794D71F00553EA7 /* Extension + UILabel.swift */; };
 		789F1FDF2790CA220059CE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F1FDE2790CA220059CE18 /* AppDelegate.swift */; };
 		789F1FE12790CA220059CE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F1FE02790CA220059CE18 /* SceneDelegate.swift */; };
 		789F1FE32790CA220059CE18 /* WeclomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F1FE22790CA220059CE18 /* WeclomeViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7836DBE42794D71F00553EA7 /* Extension + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UILabel.swift"; sourceTree = "<group>"; };
 		789F1FDB2790CA220059CE18 /* PersonalityQuizCodeLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalityQuizCodeLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		789F1FDE2790CA220059CE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		789F1FE02790CA220059CE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7836DBE32794D70700553EA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7836DBE42794D71F00553EA7 /* Extension + UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7846E6BB2790D1C50035EEE3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 			children = (
 				7846E6BB2790D1C50035EEE3 /* ViewControllers */,
 				78C793B727936DBB000AD83B /* Models */,
+				7836DBE32794D70700553EA7 /* Extensions */,
 				78C793B2279228B8000AD83B /* App */,
 				78C793B1279228B2000AD83B /* Media */,
 				78C793B0279228A9000AD83B /* Storyboards */,
@@ -185,6 +196,7 @@
 			files = (
 				78C793B62792FF83000AD83B /* ResultViewController.swift in Sources */,
 				789F1FE32790CA220059CE18 /* WeclomeViewController.swift in Sources */,
+				7836DBE52794D71F00553EA7 /* Extension + UILabel.swift in Sources */,
 				789F1FDF2790CA220059CE18 /* AppDelegate.swift in Sources */,
 				78C793B927936DFC000AD83B /* Question.swift in Sources */,
 				78C793B42792BB30000AD83B /* QuizViewController.swift in Sources */,
